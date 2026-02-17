@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Developer &mdash; Portfolio</title>
+  <meta name="description" content="Creative Developer & Digital Artist. Crafting immersive digital experiences with motion, detail, and purpose.">
+
+  <!-- Preconnect to font providers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP & Lenis from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-line"></div>
+      <span class="loader-text">Loading</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo" data-magnetic>
+      <span class="nav-logo-text">JF</span>
+    </a>
+    <div class="nav-links">
+      <a href="#work" class="nav-link" data-magnetic>Work</a>
+      <a href="#about" class="nav-link" data-magnetic>About</a>
+      <a href="#contact" class="nav-link" data-magnetic>Contact</a>
+    </div>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu" data-magnetic>
+      <span class="nav-menu-line"></span>
+      <span class="nav-menu-line"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#work" class="mobile-menu-link">Work</a>
+      <a href="#about" class="mobile-menu-link">About</a>
+      <a href="#contact" class="mobile-menu-link">Contact</a>
+    </div>
+  </div>
+
+  <!-- Main Content Wrapper (for Lenis) -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-title-wrap">
+          <h1 class="hero-title">
+            <span class="hero-line">
+              <span class="hero-line-inner" data-animate="hero">Creative</span>
+            </span>
+            <span class="hero-line">
+              <span class="hero-line-inner" data-animate="hero">Developer</span>
+            </span>
+            <span class="hero-line hero-line--accent">
+              <span class="hero-line-inner" data-animate="hero">&amp; Digital Artist</span>
+            </span>
+          </h1>
+        </div>
+        <div class="hero-info">
+          <p class="hero-description" data-animate="fade-up">
+            Crafting immersive digital experiences with<br>
+            motion, detail, and purpose.
+          </p>
+          <div class="hero-meta" data-animate="fade-up">
+            <span class="hero-meta-item">Based in Brooklyn, NY</span>
+            <span class="hero-meta-divider">/</span>
+            <span class="hero-meta-item">Available for Freelance</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" data-animate="fade-up">
+        <div class="hero-scroll-line"></div>
+        <span class="hero-scroll-text">Scroll</span>
+      </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-section">
+      <div class="marquee" data-animate="marquee">
+        <div class="marquee-inner">
+          <span class="marquee-item">Interactive Experiences</span>
+          <span class="marquee-separator">&bull;</span>
+          <span class="marquee-item">Creative Development</span>
+          <span class="marquee-separator">&bull;</span>
+          <span class="marquee-item">Motion Design</span>
+          <span class="marquee-separator">&bull;</span>
+          <span class="marquee-item">Generative Art</span>
+          <span class="marquee-separator">&bull;</span>
+          <span class="marquee-item">Interactive Experiences</span>
+          <span class="marquee-separator">&bull;</span>
+          <span class="marquee-item">Creative Development</span>
+          <span class="marquee-separator">&bull;</span>
+          <span class="marquee-item">Motion Design</span>
+          <span class="marquee-separator">&bull;</span>
+          <span class="marquee-item">Generative Art</span>
+          <span class="marquee-separator">&bull;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section class="work" id="work">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-label">Selected Work</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+
+      <div class="work-grid">
+        <!-- Project 1 -->
+        <article class="work-item" data-animate="project">
+          <a href="#" class="work-item-link">
+            <div class="work-item-image-wrap">
+              <div class="work-item-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                <div class="work-item-image-overlay"></div>
+                <span class="work-item-image-placeholder">01</span>
+              </div>
+            </div>
+            <div class="work-item-info">
+              <h3 class="work-item-title">Stellar Interface</h3>
+              <div class="work-item-details">
+                <span class="work-item-category">Web Experience</span>
+                <span class="work-item-year">2025</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="work-item" data-animate="project">
+          <a href="#" class="work-item-link">
+            <div class="work-item-image-wrap">
+              <div class="work-item-image" style="background: linear-gradient(135deg, #2d1b69 0%, #11001c 50%, #200034 100%);">
+                <div class="work-item-image-overlay"></div>
+                <span class="work-item-image-placeholder">02</span>
+              </div>
+            </div>
+            <div class="work-item-info">
+              <h3 class="work-item-title">Void Gallery</h3>
+              <div class="work-item-details">
+                <span class="work-item-category">Interactive Installation</span>
+                <span class="work-item-year">2025</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="work-item" data-animate="project">
+          <a href="#" class="work-item-link">
+            <div class="work-item-image-wrap">
+              <div class="work-item-image" style="background: linear-gradient(135deg, #0a3d2e 0%, #0d1b2a 50%, #1b3a4b 100%);">
+                <div class="work-item-image-overlay"></div>
+                <span class="work-item-image-placeholder">03</span>
+              </div>
+            </div>
+            <div class="work-item-info">
+              <h3 class="work-item-title">Echosystem</h3>
+              <div class="work-item-details">
+                <span class="work-item-category">Generative Art</span>
+                <span class="work-item-year">2024</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="work-item" data-animate="project">
+          <a href="#" class="work-item-link">
+            <div class="work-item-image-wrap">
+              <div class="work-item-image" style="background: linear-gradient(135deg, #1a0a0a 0%, #2d1f1f 50%, #3d2525 100%);">
+                <div class="work-item-image-overlay"></div>
+                <span class="work-item-image-placeholder">04</span>
+              </div>
+            </div>
+            <div class="work-item-info">
+              <h3 class="work-item-title">Meridian Studio</h3>
+              <div class="work-item-details">
+                <span class="work-item-category">Brand & Development</span>
+                <span class="work-item-year">2024</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">About</span>
+          <h2 class="section-title">Who I Am</h2>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text" data-animate="fade-up">
+            <p class="about-paragraph about-paragraph--large">
+              I'm an independent creative developer with a passion for building
+              handcrafted digital experiences that blend motion, interactivity,
+              and thoughtful design.
+            </p>
+            <p class="about-paragraph">
+              With over a decade of experience in front-end engineering and
+              creative technology, I specialize in creating immersive web
+              experiences that push the boundaries of what's possible in the
+              browser. I'm addicted to well thought-through animations and
+              smart user-experiences.
+            </p>
+            <p class="about-paragraph">
+              When I'm not building for the web, I explore generative art &mdash;
+              creating algorithms that generate visuals for screens and the
+              physical world.
+            </p>
+          </div>
+
+          <div class="about-skills" data-animate="fade-up">
+            <div class="about-skills-group">
+              <h3 class="about-skills-title">Expertise</h3>
+              <ul class="about-skills-list">
+                <li>Creative Development</li>
+                <li>Interactive Experiences</li>
+                <li>Motion & Animation</li>
+                <li>Generative Art</li>
+                <li>Front-end Architecture</li>
+              </ul>
+            </div>
+            <div class="about-skills-group">
+              <h3 class="about-skills-title">Technologies</h3>
+              <ul class="about-skills-list">
+                <li>JavaScript / TypeScript</li>
+                <li>GSAP / Lenis</li>
+                <li>Three.js / WebGL</li>
+                <li>React / Next.js</li>
+                <li>HTML / CSS / Canvas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" data-animate="stats">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <span class="stat-number" data-count="10">0</span>
+          <span class="stat-label">Years of<br>Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="50">0</span>
+          <span class="stat-label">Projects<br>Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="30">0</span>
+          <span class="stat-label">Happy<br>Clients</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="8">0</span>
+          <span class="stat-label">Awards<br>Won</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-label">Get in Touch</span>
+        </div>
+        <div class="contact-content">
+          <h2 class="contact-title" data-animate="split-text">
+            Let's create<br>something together
+          </h2>
+          <a href="mailto:hello@example.com" class="contact-email" data-animate="fade-up" data-magnetic>
+            hello@example.com
+          </a>
+          <div class="contact-links" data-animate="fade-up">
+            <a href="#" class="contact-link" data-magnetic>Twitter</a>
+            <a href="#" class="contact-link" data-magnetic>GitHub</a>
+            <a href="#" class="contact-link" data-magnetic>LinkedIn</a>
+            <a href="#" class="contact-link" data-magnetic>Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <span class="footer-copy">&copy; 2026 &mdash; All rights reserved</span>
+        <span class="footer-version">v1.0</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
